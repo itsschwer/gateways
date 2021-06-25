@@ -18,6 +18,9 @@ Furthermore, custom Gateway requires a Dragon's Breath and a Lodestone (which re
 
 Additionally, Gateways are dimension-locked, meaning that, for example, players can't abuse the Nether distance scaling to travel incredibly far by using Overworld positions for Nether Gateways.
 
+### Breaking
+This datapack does not provide any methods of destroying End Gateway blocks. To do so, player's can use the 'domes' of Huge Red Mushrooms to replace the Gateway block or the headless piston exploit.
+
 ## Guide
 *This datapack was developed in 1.17 (`"pack_format": 7`) but should be compatible with versions using an equivalent or greater `pack_format`, barring major changes to commands/datapacks.*
 
