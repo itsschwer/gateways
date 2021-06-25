@@ -43,5 +43,5 @@ data modify entity @s Item.tag.Enchantments append value {}
 # Play sound for feedback
 playsound minecraft:block.amethyst_cluster.place master @a ~ ~ ~
 
-# Clear sgw_store
-# function gateways:clean
+
+function gateways:clean
