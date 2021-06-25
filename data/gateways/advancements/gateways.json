@@ -5,7 +5,7 @@
 			"nbt": "{Enchantments:[{}]}"
 		},
 		"title": "Gateways",
-		"description": ["",{"text":"Drop a ","color":"#C77AFF"},{"text":"Dragon's Breath","color":"yellow"},{"text":" named '","color":"#C77AFF"},{"text":"Gateway Essence","color":"yellow"},{"text":"' or '","color":"#C77AFF"},{"text":"Gateway Extract","color":"yellow"},{"text":"' to create a ","color":"#C77AFF"},{"text":"Bottled Gateway","color":"yellow"}],
+		"description": ["",{"text":"Drop a ","color":"#C77AFF"},{"text":"Dragon's Breath","color":"yellow"},{"text":" named ","color":"#C77AFF"},{"text":"Gateway Essence","color":"yellow","italic":true},{"text":" or ","color":"#C77AFF"},{"text":"Gateway Extract","color":"yellow","italic":true},{"text":" to create a ","color":"#C77AFF"},{"text":"Bottled Gateway","color":"yellow"}],
 		"show_toast": false,
 		"announce_to_chat": false
 	},
