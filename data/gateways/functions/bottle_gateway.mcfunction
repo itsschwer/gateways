@@ -1,5 +1,7 @@
 # Store data into storage (use storage rather than directly to item in order to access from sign)
-data modify storage schwer:sgw_store Dimension set value "minecraft:overworld"
+# @p can reach across dimensions, but is intended to be overwritten unless in a custom dimension (experimental)
+data modify storage schwer:sgw_store Dimension set from entity @p Dimension
+execute as @s[predicate=gateways:in_overworld] run data modify storage schwer:sgw_store Dimension set value "minecraft:overworld"
 execute as @s[predicate=gateways:in_the_nether] run data modify storage schwer:sgw_store Dimension set value "minecraft:the_nether"
 execute as @s[predicate=gateways:in_the_end] run data modify storage schwer:sgw_store Dimension set value "minecraft:the_end"
 data modify storage schwer:sgw_store Placement set value "Default"
