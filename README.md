@@ -9,7 +9,7 @@ This datapack aims to provide a balanced, survival-friendly way of placing custo
 ### Balancing
 Each Gateway is one-way only, and requires that the player first travels to the desired location to capture the destination then travel to where they wish to place the Gateway.
 
-Furthermore, custom Gateway requires a Dragon's Breath and a Lodestone (which require Netherite), meaning that creating a custom Gateway is:
+Furthermore, each Gateway requires a Dragon's Breath and a Lodestone (which requires Netherite), meaning that creating custom Gateways is:
 1. A late-game quality-of-life feature
 2. Relatively expensive
     - An Ender Dragon needs to be spawned to obtain Dragon's Breath.
@@ -34,21 +34,19 @@ This datapack does not provide any methods of destroying End Gateway blocks. To 
 
 ### Bottled Gateways
 
-Dropping a Dragon's Breath named either *Gateway Essence* or *Gateway Extract* lands on ground with an air block above it will convert it into a Bottled Gateway.
+Dropping a Dragon's Breath named either *Gateway Essence* or *Gateway Extract* on any ground with an air block above it will convert it into a Bottled Gateway.
 
-A Bottled Gateway will remember the coordinates it was dropped at and the dimension it was dropped in. This information is also visible by hovering over the item when in an inventory. Additionally, the colour of the Bottled Gateway's name corresponds with the dimension it was created in.
+A Bottled Gateway will remember the coordinates it was dropped at and the dimension it was dropped in. This information can be viewed by hovering over the item when in an inventory. Additionally, the colour of a Bottled Gateway's name corresponds with the dimension it was created in.
 
 Another bit of information remembered by Bottled Gateways is whether it was formed from a *Gateway Essence* or a *Gateway Extract*. This controls how the Gateway will teleport an entity travelling through it.
-
-A *Gateway Essence* will create a Bottled Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), where it searches for the highest full block starting from the north-west corner of an 11 by 11 column centred on the Gateway to place entities.
-
-A *Gateway Extract* will create a Bottled Gateway that positions entities that travel through it exactly to the set destination.
+- A *Gateway Essence* will create a Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), which searches for the highest full block starting from the north-west corner of an 11 by 11 vertical column centred on the Gateway to place entities.
+- A *Gateway Extract* will create a Gateway that positions entities that travel through it exactly to the set destination.
 
 ### Custom Gateways
 
-Dropping a Bottled Gateway on top of Lodestone in the same dimension it was created in will create a Gateway block, replacing the Lodestone.
+Dropping a Bottled Gateway on top of a Lodestone in the same dimension the Bottled Gateway was created in will create a Gateway block, replacing the Lodestone.
 
-This Gateway then functions like regular End Gateway blocks, teleporting entities that enter it to the set destination.
+This Gateway then functions like a regular End Gateway block, teleporting entities that enter it to the set destination.
 
 ## Functions
 *Split between 'Available' (i.e. fine to call using `/function`) and 'Internal' (not intended to be called by `/function`).*
@@ -81,7 +79,7 @@ Handles the conversion of *Gateway Essences* and *Gateway Extracts* into Bottled
 Run from `tick` when a single (i.e. non-stacked) Dragon's Breath named either *Gateway Essence* or *Gateway Extract* lands on ground with an air block above it.
 
 #### `grant_advancement`
-Handles the logic for granting an advancement to the player who dropped the Bottled Gateway in creating an End Gateway.
+Handles the logic for granting an advancement to the player who dropped the Bottled Gateway in creating a Gateway.
 
 Run from `place_gateway`.
 
@@ -91,7 +89,7 @@ Sets up this datapack by adding the `sgw_score` scoreboard objective and startin
 Called through Minecraft's *`load.json`*.
 
 #### `place_gateway`
-Handles the creation of custom Gateways, consuming a Bottled Gateway, and granting an advancement on the player responsible (if applicable).
+Handles the creation of Gateways, consuming a Bottled Gateway, and granting an advancement to the player responsible (if applicable).
 
 Run from `tick` when a single (i.e. non-stacked) Bottled Gateway lands on a Lodestone in the same dimension it was created in.
 
