@@ -10,6 +10,9 @@ playsound minecraft:item.bottle.fill_dragonbreath master @a ~ ~ ~
 playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~
 playsound minecraft:block.beacon.activate master @a ~ ~ ~
 
-advancement grant @p[distance=..8] only gateways:create
+# Advancement logic
+data modify entity @s Advancer set from entity @s Thrower
+execute as @a run function grant_advancement
+
 
 kill @s[type=item]
