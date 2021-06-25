@@ -1,14 +1,9 @@
-#! Doesn't seem to work if setting a value with more than one character?
-# Determine placement type from name
-# execute if data entity @s {Item: {tag: {display: {Name: '{"text":"Gateway Essence"}'}}}} run data modify entity @s Item.tag.Placement set value "Default"
-# execute if data entity @s {Item: {tag: {display: {Name: '{"text":"Exact Gateway Essence"}'}}}} run data modify entity @s Item.tag.Placement set value "Exact"
-
-#! Only the player seems to have the `Dimension` tag, but @p can reach across dimensions :/
 # Store data into storage (use storage rather than directly to item in order to access from sign)
-data modify storage schwer:sgw_store Dimension set from entity @p Dimension
+data modify storage schwer:sgw_store Dimension set value "minecraft:overworld"
+execute as @s[predicate=gateways:in_the_nether] run data modify storage schwer:sgw_store Dimension set value "minecraft:the_nether"
+execute as @s[predicate=gateways:in_the_end] run data modify storage schwer:sgw_store Dimension set value "minecraft:the_end"
 data modify storage schwer:sgw_store Placement set value "Default"
 execute if data entity @s {Item: {tag: {display: {Name: '{"text":"Exact Gateway Essence"}'}}}} run data modify storage schwer:sgw_store Placement set value "Exact"
-# data modify storage schwer:sgw_store Placement set from entity @s Placement
 execute store result storage schwer:sgw_store X int 1 run data get entity @s Pos[0]
 execute store result storage schwer:sgw_store Y int 1 run data get entity @s Pos[1]
 execute store result storage schwer:sgw_store Z int 1 run data get entity @s Pos[2]
