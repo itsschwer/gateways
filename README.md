@@ -34,7 +34,54 @@ This datapack does not provide any methods of destroying End Gateway blocks. To 
 TBA
 
 ## Functions
-TBA
+*Split between 'Available' (i.e. fine to call using `/function`) and 'Internal' (not intended to be called by `/function`).*
+
+*Ordered alphabetically.*
+
+### Available
+
+#### `clean`
+- Resets scoreboard variables (`0`, `match`) for objective `sgw_score`
+- Removes contents `Dimension`, `Placement`, `X`, `Y`, `Z`, `Thrower`, `Candidate` from storage `sgw_store`
+
+Also run internally when a Bottled Gateway is created or consumed.
+
+#### `clear`
+Removes the presence of this datapack by:
+- Clearing the scheduled `tick` function
+- Running `clean`
+- Removing the `sgw_score` scoreboard objective
+
+All existing Gateways will remain and continue to be functional.
+<br/>
+All existing Bottled Gateways will remain but cease to be functional (until the datapack is reloaded).
+
+### Internal
+
+#### `bottle_gateway`
+Handles the conversion of *Gateway Essences* and *Gateway Extracts* into Bottled Gateways.
+
+Run from `tick` when a single (i.e. non-stacked) Dragon's Breath named either *Gateway Essence* or *Gateway Extract* lands on ground with an air block above it.
+
+#### `grant_advancement`
+Handles the logic for granting an advancement to the player who dropped the Bottled Gateway in creating an End Gateway.
+
+Run from `place_gateway`.
+
+#### `load`
+Sets up this datapack by adding the `sgw_score` scoreboard objective and starting the `tick` loop.
+
+Called through Minecraft's *`load.json`*.
+
+#### `place_gateway`
+Handles the creation of custom Gateways, consuming a Bottled Gateway, and granting an advancement on the player responsible (if applicable).
+
+Run from `tick` when a single (i.e. non-stacked) Bottled Gateway lands on a Lodestone in the same dimension it was created in.
+
+#### `tick`
+The main update loop. Handles the conversion of *Gateway Essences* and *Gateway Extracts* into Bottled Gateways, as well as the creation of custom Gateways.
+
+Initialises from `load`.
 
 ## References
 *(Roughly in personal use order)*
