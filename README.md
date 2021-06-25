@@ -25,8 +25,8 @@ This datapack does not provide any methods of destroying End Gateway blocks. To 
 *This datapack was developed in 1.17 (`"pack_format": 7`) but should be compatible with versions using an equivalent or greater `pack_format`, barring major changes to commands/datapacks.*
 
 1. Download:
-    - [Repository as a `.zip`](https://github.com/itsschwer/tradesteal/archive/refs/heads/master.zip) *(Code > Download ZIP)*
-    - [Release](https://github.com/itsschwer/tradesteal/releases) *(will need to unzip before installing into a save)*
+    - [Repository as a `.zip`](https://github.com/itsschwer/gateways/archive/refs/heads/master.zip) *(Code > Download ZIP)*
+    - [Release](https://github.com/itsschwer/gateways/releases) *(will need to unzip before installing into a save)*
 2. Install into a save like any other datapack.
 3. Open the advancement menu to the *Schwer* tab to view the intended hints.
 
