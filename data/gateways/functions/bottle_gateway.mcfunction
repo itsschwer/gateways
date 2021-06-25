@@ -32,7 +32,7 @@ setblock ~ ~ ~ air
 data modify entity @s Item.tag.display.Name set value '{"text":"Bottled Gateway","color":"#C77AFF","italic":false}'
 execute if data entity @s {Item: {tag: {Dimension: "minecraft:overworld"}}} run data modify entity @s Item.tag.display.Name set value '{"text":"Bottled Gateway","color":"green","italic":false}'
 execute if data entity @s {Item: {tag: {Dimension: "minecraft:the_nether"}}} run data modify entity @s Item.tag.display.Name set value '{"text":"Bottled Gateway","color":"red","italic":false}'
-execute if data entity @s {Item: {tag: {Dimension: "minecraft:the_end"}}} run data modify entity @s Item.tag.display.Name set value '{"text":"Bottled Gateway","color":"dark_purple","italic":false}'
+execute if data entity @s {Item: {tag: {Dimension: "minecraft:the_end"}}} run data modify entity @s Item.tag.display.Name set value '{"text":"Bottled Gateway","color":"light_purple","italic":false}'
 
 # Add enchantment glint
 data modify entity @s Item.tag.Enchantments append value {}
