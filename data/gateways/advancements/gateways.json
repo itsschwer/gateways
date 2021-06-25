@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:dragon_breath",
+			"nbt": "{Enchantments:[{}]}"
+		},
+		"title": "Gateways",
+		"description": ["",{"text":"Drop a ","color":"#C77AFF"},{"text":"Dragon's Breath","color":"yellow"},{"text":" named '","color":"#C77AFF"},{"text":"Gateway Essence","color":"yellow"},{"text":"' to create a ","color":"#C77AFF"},{"text":"Bottled Gateway","color":"yellow"}],
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"parent": "schwer:root",
+	"criteria": {
+		"tick": {
+			"trigger": "minecraft:tick"
+		}
+	}
+}
