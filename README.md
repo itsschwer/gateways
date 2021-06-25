@@ -1,6 +1,6 @@
 # gateways
 
-A small, datapack implementing the ability to place End Gateway blocks for teleportation.
+A small datapack implementing the ability to place custom End Gateway blocks in any dimension for teleportation.
 
 ## Intention
 
