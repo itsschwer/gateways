@@ -11,8 +11,9 @@ playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~
 playsound minecraft:block.beacon.activate master @a ~ ~ ~
 
 # Advancement logic
-data modify entity @s Advancer set from entity @s Thrower
+data modify storage schwer:sgw_store Thrower set from entity @s Thrower
 execute as @a run function gateways:grant_advancement
 
 
 kill @s[type=item]
+function gateways:clean
