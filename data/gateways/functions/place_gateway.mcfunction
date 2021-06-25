@@ -12,7 +12,7 @@ playsound minecraft:block.beacon.activate master @a ~ ~ ~
 
 # Advancement logic
 data modify entity @s Advancer set from entity @s Thrower
-execute as @a run function grant_advancement
+execute as @a run function gateways:grant_advancement
 
 
 kill @s[type=item]
