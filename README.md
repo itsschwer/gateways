@@ -31,7 +31,24 @@ This datapack does not provide any methods of destroying End Gateway blocks. To 
 3. Open the advancement menu to the *Schwer* tab to view the intended hints.
 
 ## Mechanics
-TBA
+
+### Bottled Gateways
+
+Dropping a Dragon's Breath named either *Gateway Essence* or *Gateway Extract* lands on ground with an air block above it will convert it into a Bottled Gateway.
+
+A Bottled Gateway will remember the coordinates it was dropped at and the dimension it was dropped in. This information is also visible by hovering over the item when in an inventory. Additionally, the colour of the Bottled Gateway's name corresponds with the dimension it was created in.
+
+Another bit of information remembered by Bottled Gateways is whether it was formed from a *Gateway Essence* or a *Gateway Extract*. This controls how the Gateway will teleport an entity travelling through it.
+
+A *Gateway Essence* will create a Bottled Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), where it searches for the highest full block starting from the north-west corner of an 11 by 11 column centred on the Gateway to place entities.
+
+A *Gateway Extract* will create a Bottled Gateway that positions entities that travel through it exactly to the set destination.
+
+### Custom Gateways
+
+Dropping a Bottled Gateway on top of Lodestone in the same dimension it was created in will create a Gateway block, replacing the Lodestone.
+
+This Gateway then functions like regular End Gateway blocks, teleporting entities that enter it to the set destination.
 
 ## Functions
 *Split between 'Available' (i.e. fine to call using `/function`) and 'Internal' (not intended to be called by `/function`).*
