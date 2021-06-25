@@ -5,7 +5,7 @@
 			"nbt": "{Enchantments:[{}]}"
 		},
 		"title": "To Infinity and Beyond",
-		"description": ["",{"text":"Create a gateway by using a ","color":"#C77AFF"},{"text":"Bottled Gateway","color":"yellow"},{"text":" on a ","color":"#C77AFF"},{"text":"Lodestone","color":"yellow"}],
+		"description": ["",{"text":"Create a gateway by dropping a ","color":"#C77AFF"},{"text":"Bottled Gateway","color":"yellow"},{"text":" on top of a ","color":"#C77AFF"},{"text":"Lodestone","color":"yellow"}],
 		"show_toast": true,
 		"announce_to_chat": true
 	},
