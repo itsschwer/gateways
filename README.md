@@ -42,7 +42,7 @@ Another bit of information remembered by Bottled Gateways is whether it was form
 - A *Gateway Essence* will create a Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), which searches for the highest full block starting from the north-west corner of an 11 by 11 vertical column centred on the Gateway to place entities.
 - A *Gateway Extract* will create a Gateway that positions entities that travel through it exactly to the set destination.
 
-A Bottled Gateway can be reverted back into its previous form by disenchanting it *(through a Grindstone)* and dropping it on the ground.
+A Bottled Gateway can be reverted back into its previous form by disenchanting it *(through a Grindstone)* and dropping it from an inventory.
 
 ### Custom Gateways
 
