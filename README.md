@@ -39,7 +39,7 @@ Dropping a Dragon's Breath named either *Gateway Essence* or *Gateway Extract* o
 A Bottled Gateway will remember the coordinates it was dropped at and the dimension it was dropped in. This information can be viewed by hovering over the item when in an inventory. Additionally, the colour of a Bottled Gateway's name corresponds with the dimension it was created in.
 
 Another bit of information remembered by Bottled Gateways is whether it was formed from a *Gateway Essence* or a *Gateway Extract*. This controls how the Gateway will teleport an entity travelling through it.
-- A *Gateway Essence* will create a Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), which searches for the highest full block starting from the north-west corner of an 11 by 11 vertical column centred on the Gateway to place entities.
+- A *Gateway Essence* will create a Gateway that uses the [default End Gateway teleportation logic](https://minecraft.fandom.com/wiki/End_gateway#Behavior), which searches for the highest full block starting from the north-west corner of an 11 by 11 vertical column centred on the Gateway to place entities *(north to south, west to east)*.
 - A *Gateway Extract* will create a Gateway that positions entities that travel through it exactly to the set destination.
 
 A Bottled Gateway can be reverted back into its previous form by disenchanting it *(through a Grindstone)* and dropping it from an inventory.
