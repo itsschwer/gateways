@@ -19,9 +19,6 @@ Furthermore, each Gateway requires a Dragon's Breath and a Lodestone (which requ
 
 Additionally, Gateways are dimension-locked, meaning that, for example, players can't abuse the Nether distance scaling to travel incredibly far by using Overworld positions for Nether Gateways.
 
-### Breaking
-This datapack does not provide any methods of destroying End Gateway blocks. To do so, player's can use the 'domes' of Huge Red Mushrooms to replace the Gateway block or the headless piston exploit.
-
 ## Guide
 *This datapack was developed in 1.17 (`"pack_format": 7`) but should be compatible with versions using an equivalent or greater `pack_format`, barring major changes to commands/datapacks.*
 
@@ -50,6 +47,8 @@ A Bottled Gateway can be reverted back into its previous form by disenchanting i
 Dropping a Bottled Gateway on top of a Lodestone in the same dimension the Bottled Gateway was created in will create a Gateway block, replacing the Lodestone.
 
 This Gateway then functions like a regular End Gateway block, teleporting entities that enter it to the set destination.
+
+A Gateway can be reverted back into a Lodestone by igniting a block of TNT directly above the Gateway *(the explosion will be nullified)*.
 
 ## Functions
 *Split between 'Available' (i.e. fine to call using `/function`) and 'Internal' (not intended to be called by `/function`).*
@@ -101,6 +100,11 @@ Run from `tick` when a single (i.e. non-stacked) Bottled Gateway lands on a Lode
 The main update loop. Handles the conversion of *Gateway Essences* and *Gateway Extracts* into Bottled Gateways, as well as the creation of custom Gateways.
 
 Initialises from `load`.
+
+#### `tnt_gateway`
+Handles the reversion of Gateways to Lodestones when TNT is lit directly above a Gateway, consuming the TNT (no explosion).
+
+Run from `tick` on lit TNT.
 
 #### `unbottle_gateway`
 Reverts dropped, disechanted Bottled Gateways back into *Gateway Essences* and *Gateway Extracts*.
